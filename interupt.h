@@ -30,9 +30,11 @@
 #define	XC_INTERRUPT_H
 
 void init_interrupt(void);
+void init_timer(void);
 void __interrupt(high_priority) ISR_HighPrio(void);
 void __interrupt(low_priority) ISR_LowPrio(void);
 
 void extern INT0_ISR_Callback(void);
+void extern TMR0_ISR_Callback(void);
 
 #endif

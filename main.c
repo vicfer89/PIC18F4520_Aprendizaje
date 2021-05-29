@@ -16,7 +16,12 @@ It's really easy to set up in MPLAB X.
 void main(void) {
     TRISB = 0b11110000; //RB0 a RB3 como salidas
     PORTB = 0xFF;
+    
+    init_timer();
     init_interrupt();
+    
+    ei(); // Habilita interrupciones generales
+    
     while(1)
     {
         PORTBbits.RB3 = 0; // Encendemos RB3 y RB2
@@ -29,6 +34,10 @@ void main(void) {
 
 void INT0_ISR_Callback(void)
 {
-    PORTBbits.RB1 = !PORTBbits.RB1; // Toggle RB1
-    PORTBbits.RB2 = !PORTBbits.RB2; // Toggle RB2
+    PORTBbits.RB2 = !PORTBbits.RB2; // Toggle RB1
+}
+
+void TMR0_ISR_Callback(void)
+{
+    PORTBbits.RB1 = !PORTBbits.RB1; // Toggle RB2
 }
