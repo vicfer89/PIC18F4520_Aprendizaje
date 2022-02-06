@@ -43,21 +43,15 @@ void init_timer(void)
 
 void __interrupt(high_priority) ISR_HighPrio(void)
 {
-    if( INTCONbits.TMR0IF == 1)
+    if( 1 == INTCONbits.TMR0IF )
     {
         TMR0_ISR_Callback(); // Procesamos interrupción en su manejador
         INTCONbits.TMR0IF = 0; // Bajamos bandera de interrupción
     }
     
-    if( INTCONbits.INT0IF == 1 )
+    if( 1 == INTCONbits.INT0IF )
     {
         INT0_ISR_Callback();
         INTCONbits.INT0IF = 0;
     }
 }
-
-// Si no está definida, se ejecuta este código
-/*__attribute__((weak)) void INT0_ISR_Callback(void)
-{
-    // No hacer nada
-}*/

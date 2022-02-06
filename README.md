@@ -2,7 +2,9 @@
 
 > Repositorio para aprendizaje con PIC18F4520, basado en programación ISP via UART. Placa: _SURE DB-DP113V310_
 
-**NOTA:** _Los rangos para ROM han de ser 4-3f00 para que el compilador no sobreescriba direcciones de memoria correspondientes al bootloader_
+**NOTA:** _Los rangos para ROM han de evitar ser 4-3f00 para que el compilador no sobreescriba direcciones de memoria correspondientes al bootloader_
+
+Para esto, en las opciones del proyecto, en XC8 Linker > "Option Categories" > Memory Model, establecer en ROM Ranges 4 - 3f00 para evitar sobrescribir ese rango.
 
 ## Lista de tareas a completar:
 
