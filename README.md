@@ -2,6 +2,15 @@
 
 > Repositorio para aprendizaje con PIC18F4520, basado en programación ISP via UART. Placa: _SURE DB-DP113V310_
 
+### Elementos empleados
+- Bootloader _TinyBootloader_ en web [TinyBootloader](http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm)
+- Tutorial de uso [Tutorial PIC con Tiny Bootloader](http://tecbolivia.com/index.php/articulos-y-tutoriales-microcontroladores/57-tutorial-pic-con-tiny-bootloader)
+
+### Troubleshooting
+- Problemas con TinyBootloader: [PIC16F4550 tinybootloader](https://www.microchip.com/forums/m917450.aspx)
+
+### Notas Importantes
+
 **NOTA:** _Los rangos para ROM han de evitar ser 4-3f00 para que el compilador no sobreescriba direcciones de memoria correspondientes al bootloader_
 
 Para esto, en las opciones del proyecto, en XC8 Linker > "Option Categories" > Memory Model, establecer en ROM Ranges 4 - 3f00 para evitar sobrescribir ese rango.
