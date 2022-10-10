@@ -4,6 +4,7 @@
 
 ### Elementos empleados
 - Bootloader _TinyBootloader_ en web [TinyBootloader](http://www.etc.ugal.ro/cchiculita/software/picbootloader.htm)
+  - Descargar de _TinyBootloader_ la versión de 2008 y la de 2011, ya que en la de 2008 viene el Bootloader a cargar en el microcontrolador.
 - Tutorial de uso [Tutorial PIC con Tiny Bootloader](http://tecbolivia.com/index.php/articulos-y-tutoriales-microcontroladores/57-tutorial-pic-con-tiny-bootloader)
 
 ### Troubleshooting
